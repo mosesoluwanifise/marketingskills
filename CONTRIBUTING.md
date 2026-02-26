@@ -65,6 +65,23 @@ skills/your-skill-name/
 3. Keep changes focused and minimal
 4. Update the version in metadata if making significant changes
 
+## Keeping Your Fork Up-to-Date
+
+If you have forked this repository, you can sync it with upstream contributions at any time:
+
+```bash
+# Add the upstream remote (one-time setup)
+git remote add upstream https://github.com/coreyhaines31/marketingskills.git
+
+# Fetch and merge upstream changes
+git fetch upstream
+git checkout main
+git merge upstream/main
+
+# Push the updates to your fork
+git push origin main
+```
+
 ## Submitting Your Contribution
 
 1. Fork the repository

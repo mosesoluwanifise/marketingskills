@@ -104,6 +104,32 @@ Then reference skills from `.claude/marketingskills/skills/`.
 2. Customize skills for your specific needs
 3. Clone your fork into your projects
 
+#### Keeping your fork up-to-date
+
+To pull in new skills and updates from the upstream repository:
+
+```bash
+# Add the upstream remote (one-time setup)
+git remote add upstream https://github.com/coreyhaines31/marketingskills.git
+
+# Fetch and merge upstream changes into your fork
+git fetch upstream
+git checkout main
+git merge upstream/main
+
+# Push the updated main branch to your fork
+git push origin main
+```
+
+If you prefer rebasing over merging:
+
+```bash
+git fetch upstream
+git checkout main
+git rebase upstream/main
+git push origin main --force-with-lease
+```
+
 ### Option 6: SkillKit (Multi-Agent)
 
 Use [SkillKit](https://github.com/rohitg00/skillkit) to install skills across multiple AI agents (Claude Code, Cursor, Copilot, etc.):
